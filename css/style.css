@@ -1,0 +1,1903 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+}
+h1{font-size: 36px;}
+.header{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid lightgray;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+}
+.headerLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.headerContainer{
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+.menuBar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.topMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+.topMenu_items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.topMenu_items a,
+.botMenu a{
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    position: relative;
+    font-size: 18px;
+}
+.topMenu_items a::after,
+.botMenu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.1em;
+    bottom: -10px;
+    left: 0;
+    background: #0084BF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    max-width:70%;
+}  
+.topMenu_items a:hover::after,
+.botMenu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.topMenu_items a.active::after{
+    transform: scaleX(1);
+}
+.topCntct{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.topCntct i {
+    margin: 0 5px;
+}
+.botMenu{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+/*header END*/
+
+.videoSect{
+    background-color: silver;
+    width: 100%;
+    height: 70vh;
+    padding-top: 110px;
+}
+
+.companyDatas{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f4f7f8;
+}
+
+.cmpnyMail,
+.cmpnyPhone,
+.cmpnyLctin,
+.cmpnyWH{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.cmpnyMail p,
+.cmpnyPhone p,
+.cmpnyLctin p,
+.cmpnyWH p{
+    text-align: center;
+    margin: 25px 0;
+}
+.hcwHelp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.hcwHelp h1{
+    margin: 50px 0;
+}
+.hcwh{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.hcwhCompany,
+.hcwhPrivate{
+    width: 45%;
+    height: 400px;
+    border-radius: 8px;
+    background-color: silver;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hcwhCompany h2,
+.hcwhPrivate h2{
+    color: #fff;
+    margin: 0 0 20px 40px;
+    font-size: 25px;
+}
+.hcwhCompany p,
+.hcwhPrivate p{
+    color: #fff;
+    margin: 0 0 50px 40px;
+    font-size: 20px;
+}
+/* footer */
+.footer{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+}
+.footCmpny{
+    display: flex;
+    width: 35%;
+    height: 100%;
+    background-color: #2A3A4D;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.footLogo{
+    margin-top: 80px;
+}
+.footCntct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footCntct i {
+    margin-right: 20px;
+}
+.footCntct a{
+    text-decoration: none;
+    color: #fff;
+    transition: color .4s ease;
+}
+.footCntct > a:last-of-type {
+    margin-left: 35px;
+}
+.footCntct a:hover{
+    color: #0084BF;
+    
+}
+.footRows{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    color: #fff;
+}
+.footTopRow{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: #384C64;
+}
+.footBotRow{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-color: #465A72;
+}
+.footTopRow a,
+.footBotRow a{
+    text-decoration: none;
+    color: #fff;
+    margin: 5.5px 0;
+}
+.footTopRow a:hover,
+.footBotRow a:hover{
+    text-decoration: underline;
+}
+
+.footPhone,
+.footMail,
+.footLctn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.PrvtlsngnCol,
+.FrmnlsngnCol,
+.DasUntrnhmnCol{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 80px ;
+}
+
+.ZlgrppnCol,
+.ZlgrppnCol2,
+.ZlgrppnCol3{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 0 80px;
+}
+.ZlgrppnCol2 h2,
+.ZlgrppnCol3 h2{
+    visibility: hidden;
+}
+.cardSlider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+}
+.cardRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 60%;
+}
+.card h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom:50px ;
+    color: #33546F;
+}
+.card p{
+    margin-bottom: 30px;
+} 
+.next,
+.prev{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border:1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+.next{
+    right: 10px;
+}
+.prev{
+    left: 10px;
+}
+.nxtArrow{
+    border-right: 3px solid #33546F;
+    border-bottom: 3px solid #33546F;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
+    position: relative;
+    right: 5px;
+}
+.prvArrow{
+    border-left: 3px solid #33546F;
+    border-top: 3px solid #33546F;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
+    position: relative;
+    left: 5px;
+}
+.cardDots{
+    margin-top: 30px;
+    display: flex;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid #33546F;
+}
+.dot:nth-child(1){
+    background-color: #33546F;
+}
+.companyCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.cCardRow{
+    display: flex;
+    margin: 100px 0;
+}
+.cCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: 700px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+.cCard .logo{
+    margin-top: 40px;
+    height: 150px;
+}
+.cCard .profp{
+    height: 160px;
+    width: 160px;
+    margin-top: 40px;
+    border-radius: 50%;
+    background-position: center; 
+}
+.cCard .profp img{
+    border-radius: 50%;
+    max-width: 160px;
+}
+.cCard .logo img{
+    max-height: 140px;
+}
+.cCard .line{
+    width: 90%;
+    height: 1px;
+    background-color: lightgray;
+}
+.cCard h3{
+    font-size: 23px;
+    color: #33546F;
+}
+.cCard p{
+    width: 90%;
+    text-align: center;
+    line-height: 25px;
+    font-size: 20px;
+}
+.cCard a{
+    text-decoration: none;
+    color: #33546F;
+}
+.cCardControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    transition: background-color .4s ease;
+    z-index: 3;
+}
+.cCardControl:last-child{
+    left: auto;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.cCardControl:hover{
+    background-color: #fff;
+}
+.cCardControl .next{
+    background-color: #fff;
+}
+.cCardControl .prev{
+    background-color: #fff;
+}
+.contactUs{
+    width: 100%;
+    height: 640px;
+    background-image: url(../images/house.jpg);
+    background-size: cover;
+    background-position: 50% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactForm{
+    width: 50%;
+    height: 350px;
+    background-color: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactFormCntnr{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contactFormCntnr h2{
+    font-size: 30px;
+}
+.contactFormCntnr a{
+    border: 2px solid #33546F;
+    padding: 20px 60px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #33546F;
+    font-weight: 600;
+    transition: background-color .8s ease;
+}
+.indexContainer .contactFormCntnr a:last-child{
+    background-color: #33546F;
+    color: #fff;
+}
+.contactFormCntnr a:hover{
+    background-color: #33546F;
+    color: #fff;
+}
+.indexContainer .contactFormCntnr a:last-child:hover{
+    background-color: #000;
+}
+.contactFormCntnrBttns{
+    margin-top: 70px;
+}
+.brwTeam{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teamType{
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.teamType span{
+    font-weight: 700;
+    font-size: 22px;
+    color: #33546F;
+    padding: 0 10px 20px 10px;
+    bottom: -12px;
+    position: relative;
+    cursor: pointer;
+}
+.teamType span:first-child{
+    border-bottom: 3px solid #33546F;
+}
+.teamMmbrs{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 80%;
+    margin: 50px 0 100px 0;
+}
+.membrsColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+.membrsColumn:nth-child(odd){
+    position: relative;
+    top: 50px;
+}
+.membrsColumn .mmbr{
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background-position: center;
+    width: 130px;
+    height: 130px;
+    margin: 10px 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .3);
+}
+.membrsColumn .mmbr img{
+    border-radius: 50%;
+}
+.mmbr a{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(51, 84, 111, 0.9);
+    transition: opacity 0.5s ease;
+    pointer-events: none; 
+}
+.mmbr:hover a{
+    opacity: 1;
+    pointer-events: auto;
+}
+.plan_advise{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+.plan_advise h1{
+    margin-bottom: 50px;
+}
+.p_a{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 80%;
+    height: auto;
+}
+.p_aCard{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 20px 3px rgba(90, 90, 90, 0.2);
+    border-radius: 5px;
+    width: 700px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.paCardAgent{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.agentImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto
+}
+.agentImg img{
+    border-radius: 50%;
+}
+
+.agentData{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: auto;
+    flex-direction: column;
+}
+#wGroup{
+    color: darkgray;
+    font-size: 12px;
+    
+}
+.agentData p:first-child{
+    font-size: 22px;
+    color: #33546F;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.agentData p i{
+    margin-right: 10px;
+}
+.p_aCard a{
+    width: 100%;
+    height: 30%;
+    color: #fff;
+    background-color: #2A3A4D;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    transition: background-color .5s ease;
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+}
+.p_aCard a:hover{
+    background-color: #000;
+}
+.p_aDatas{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 30%;
+}
+.p_aDatas p{
+    width: 100%;
+}
+.padTop{
+    height: 300px;
+    border-bottom: 1px solid lightgray;
+}
+.padAgnt{
+    margin: 5px 5px;
+    opacity: .5;
+}
+.padAgnt,
+.padAgnt img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.padAgents{
+    display: flex;
+    flex-wrap: wrap;
+}
+.padChoose{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.padChoose p{
+    font-weight: 700;
+}
+.padChoose p:first-child{
+    color: #0084BF;
+}
+.padMenu{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.padMenu p{
+    width: auto;
+    margin-right: 10px;
+}
+.padArrow{
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #0084BF;
+    border-bottom: 2px solid #0084BF;
+    transform: rotate(45deg);
+}
+.padMenu:first-of-type .padArrow{
+    transform: rotate(-135deg);
+}
+.padAgents .padAgnt:first-child{
+    border:2px solid #0084BF;
+    opacity: 1;
+}
+.subHeader{
+    margin-top: 110px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #2A3A4D;
+    z-index: 10;
+}
+.shItems{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.shItems a{
+    text-decoration: none;
+    color: #ffffff99;
+    margin-right: 20px;
+}
+.shItems a:hover{
+    color: #fff;
+}
+.shItems a.active{
+    color: #fff;
+}
+/*Firmenlösungen*/
+.firmenContainer .videoSect{
+    height: 82vh;
+}
+.firmenContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.floatingTitleContainer{
+    background-color: #f4f7f8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floatingTitle{
+    width: 60%;
+    min-height: 270px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px 3px rgba(90, 90, 90, 0.2);
+    background-color: #fff;
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ftText{
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ftText h1{
+    font-size: 35px;
+    margin: 10px 0 30px 0;
+    color: #2A3A4D;
+}
+.ftText p{
+    font-size: 18px;
+}/*#f4f7f8*/
+
+.paertnerContainer{
+    width: 100%;
+    background-color: #f4f7f8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.partnerSect{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.pTexts{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ptFix{
+    width: 90%;
+}
+.ptDnmc{
+    margin: 50px 0;
+}
+.ptSlider{
+    display: flex;
+    margin-left: -150px;
+}
+.ptControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 200px;
+    position: relative;
+    top: 80px;
+    right:70px;
+    transition: background-color .4s ease;
+    z-index: 3;
+}
+.ptControl:last-child{
+    left:110px;
+}
+.ptControl:hover{
+    background-color: #fff;
+}
+.ptControl .next{
+    background-color: #fff;
+}
+.ptControl .prev{
+    background-color: #fff;
+}
+.pImage{
+    background-image: url(../images/AdobeStock.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 700px;
+    height: 600px;
+    position: relative;
+    top: 50px;
+}
+.firmenContainer .plan_advise h1{
+    margin: 100px 0;
+}
+.specificSolutions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.specificSolutions h1{
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+.spsoImages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.spsoImgBox{
+    position: relative;
+    margin: 8px 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 3px;
+    color: #fff;
+    width: 450px;
+    height: 300px;
+    padding-bottom: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #2A3A4D 100%);
+}
+.spsoImgBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/spso1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+.spsoImgBox:nth-child(2):before{
+    background-image: url("../images/spso2.jpg");
+}
+.spsoImgBox:nth-child(3):before{
+    background-image: url("../images/spso3.jpg");
+}
+.spsoImgBox:nth-child(4):before{
+    background-image: url("../images/spso4.jpg");
+}
+.spsoImgBox:nth-child(5):before{
+    background-image: url("../images/spso5.jpg");
+}
+.spsoImgBox:nth-child(6):before{
+    background-image: url("../images/spso6.jpg");
+}
+.spsoImgBox:nth-child(7):before{
+    background-image: url("../images/spso7.jpg");
+}
+.spsoImgBox:nth-child(8):before{
+    background-image: url("../images/spso8.jpg");
+}
+
+.spsoImgBox:hover::before {
+    transform: scale(1.2);
+}
+.firmenContainer .companyCards{
+    flex-direction: column;
+    margin: 100px 0;
+}
+.firmenContainer .cCardRow{
+    margin: 20px 0;
+}
+.firmenContainer .cCard .line{
+    margin-bottom: 20px;
+}
+.topSolutions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.ts_NodeProductTable{
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.ts_NodeProduct{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 580px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px 3px rgba(90, 90, 90, 0.2);
+    margin: 20px;
+}
+.ts_npImage img{
+    border-radius: 5px 5px 0 0;
+    max-width: 400px;
+}
+.ts_npText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.ts_npText p{
+    font-size: 20px;
+    width: 70%;
+    line-height: 30px;
+}
+.ts_npText::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    pointer-events: none; 
+}
+.ts_npText h2{
+    font-size: 30px;
+    width: 70%;
+    margin-bottom: 0;
+}
+.ts_npBttn{
+    width: 100%;
+    height: 90px;
+}
+.ts_npBttn a{
+    background-color: #33546F;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.EngagementSection{
+    display: flex;
+    background-color: #f4f7f8;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.enggmntS_content{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    flex-direction: row-reverse;
+}
+.engS_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.engS_textBox{
+    width: 100%;
+    height: 70%;
+    background-color: #fff;
+    position: relative;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px 3px rgba(90, 90, 90, 0.2);
+}
+.engS_textBox h2,
+.engS_textBox p{
+    margin-left: 70px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+.engS_img{
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/eng_region.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.engS_bttnRow{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.engS_bttns{
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.engS_bttns a{
+    text-decoration: none;
+    color: #32465a;
+    border: 2px solid #32465a;
+    padding: 15px 15px;
+    text-transform: uppercase;
+    transition: background-color .5s ease;
+}
+.engS_bttns a.disabled {
+    color: #aaa; 
+    border-color: #aaa;
+    background-color: #f0f0f0;
+    pointer-events: none; 
+    opacity: 0.6; 
+    cursor: not-allowed; 
+}
+.engS_bttns a i{
+    margin:0 5px;
+}
+.engS_bttns a:first-child{
+    margin-right: 300px;
+}
+.engS_bttns a:hover{
+    background-color: #32465a;
+    color: #fff;
+}
+.aktuelles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+.aktuelles h1{
+    margin: 80px 0 70px 0;
+    color: #191a1c;
+    font-family: "Cabin", sans-serif;
+    font-size: 36px;
+}
+.aktuellesTable{
+    display: flex;
+}
+.aktuelleBox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: 700px;
+    border-radius: 15px;
+    margin: 0 10px;
+    box-shadow: 
+    -10px 0px 15px -5px rgba(90, 90, 90, 0.2),
+    10px 0px 15px -5px rgba(90, 90, 90, 0.2);
+    cursor: pointer;
+}
+.akt_Image img{
+    border-radius: 5px 5px 0 0;
+    max-width: 450px;
+}
+.akt_Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.akt_Text p{
+    font-size: 18px;
+    width: 95%;
+    line-height: 30px;
+}
+.akt_Text p span{
+    color: #8e8e8e;
+    margin-right: 3px;
+}
+.akt_Text p:first-child{
+    font-size: 12px;
+    color: #535557;
+    margin: 20px 0 0 0;
+}
+.akt_Text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    pointer-events: none; 
+}
+.akt_Text h2{
+    font-size: 25px;
+    width: 95%;
+    margin: 0;
+}
+.akt_Bttn{
+    width: 100%;
+    height: 90px;
+}
+.akt_Bttn a{
+    background-color: #33546F;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+/*Firmenlösungen*/
+
+/*Privatlösungen*/
+.privateContainer .videoSect{
+    height: 82vh;
+}
+.privateContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.privateContainer .pImage{
+    background-image: url("../images/AdobeStock1.jpg");
+}
+.privateContainer .spsoImgBox::before {
+    background-image: url("../images/spso9.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(2):before{
+    background-image: url("../images/spso10.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(3):before{
+    background-image: url("../images/spso11.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(4):before{
+    background-image: url("../images/spso12.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(5):before{
+    background-image: url("../images/spso13.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(6):before{
+    background-image: url("../images/spso14.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(7):before{
+    background-image: url("../images/spso15.jpg");
+}
+.privateContainer .spsoImgBox:nth-child(8):before{
+    background-image: url("../images/spso16.jpg");
+}
+.privateContainer .cCard h3{
+    margin-bottom: 2px;
+}
+.privateContainer .cCard span{
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-bottom: 20px;
+}
+.privateContainer .EngagementSection{
+    padding-bottom: 5px;
+}
+/*Privatlösungen*/
+
+/*Baufinanzierung*/
+
+.bauContainer .videoSect{
+    height: 82vh;
+}
+.bauContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.bauContainer .ftText h1{
+    margin: 40px 0 20px 0;
+}
+.bauContainer .pImage{
+    background-image: url("../images/AdobeStock2.jpg");
+    top: 0;
+}
+.bauContainer .partnerSect{
+    justify-content: center;
+}
+.bauContainer .spsoImages{
+    width: 80%;
+}
+.bauContainer .ts_NodeProductTable{
+    width: 75%;
+    justify-content: flex-start;
+}
+.qbplus{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent 40%, #000 40%, #000 60%, transparent 60%), linear-gradient(to right, transparent 40%, #000 40%, #000 60%, transparent 60%);
+    margin-right: 50px;
+}
+.Questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.questColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.questionBox{
+    display: flex;
+    width: 65%;
+    height: 70px;
+    background-color: #f4f7f8;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.qb_text{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+.qb_text p{
+    font-size: 24px;
+    color: #191a1c;
+    margin-left: 50px;
+    font-weight: 500;
+}
+.qbplusSign{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+.MoreThanInsurance{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+}
+.magicCube{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.mc_Dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.mc_Dots .dot{
+    width: 15px;
+    height: 15px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background-color: #0000004d;
+    border:none;
+}
+.mc_Dots .dot:first-child{
+    background-color: #557191;
+}
+.mCube{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mc_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 50vh;
+}
+.mc_text h3{
+    color: #191a1c;
+    font-size: 26px;
+}
+.mc_text p{
+    width: 70%;
+    font-size: 24px;
+    
+}
+
+.ManagerContainer .videoSect{
+    background-image: url("../images/Managerhaftung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.Ins_benefits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f7f8;
+    width: 100%;
+}
+.benefitCardRow{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+.benefitCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    text-align: center;
+}
+.bCardImg img{
+    width: 136px;
+    height: 136px;
+}
+.bCardText p{
+    font-size: 24px;
+    color: #191a1c;
+}
+.fullFieldParagraph{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.ffParItem{
+    display: flex;
+    height: 480px;
+}
+.ffpItem_Text{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ffpitem_tB{
+    width: 80%;
+}
+.ffpItem_Text h2{
+    font-size: 26px;
+    color: #191a1c;
+}
+.ffpItem_Text p{
+    font-size: 18px;
+    color: #191a1c;
+}
+.ffpitem_tB li{
+    margin-bottom: 10px;
+}
+.ffpItem_Image{
+    background-image: url("../images/ffpImg1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+.ffParItem:nth-child(2){
+    flex-direction: row-reverse;
+}
+.ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg2.jpg");
+}
+.ins_Options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0;
+}
+.ins_Options p{
+    color: #191a1c;
+    font-size: 18px;
+}
+.ins_Options p b{
+    color: #0084BF;
+}
+.ins_optCont{
+    width: 70%;
+}
+.rightContact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.rcBanner{
+    width: 100%;
+    height: 480px;
+    display: flex;
+}
+.rcImage{
+    width: 50%;
+    background-image: url("../images/brw.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.rcText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.rcTextBox{
+    width: 75%;
+}
+.rcTextBox p{
+    font-size: 18px;
+    color: #191a1c;
+    line-height: 28px;
+}
+.ManagerContainer .ts_NodeProductTable{
+    width: 85%;
+}
+.workBenefits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f7f8;
+    width: 100%;
+    padding: 50px 0;
+}
+.ManagerContainer .workBenefits .benefitCard:nth-child(1) .bCardImg {
+    margin-bottom: 10px;
+}
+.ManagerContainer .workBenefits .benefitCard:nth-child(2) .bCardImg {
+    margin-bottom: 20px;
+}
+.ManagerContainer.workBenefits .benefitCard:nth-child(3) .bCardImg {
+    margin-bottom: 30px;
+}
+
+.cyberContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.cyberContainer .videoSect{
+    background-image: url("../images/cyberschutz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.cyberContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg3.jpg");
+}
+.cyberContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg4.jpg");
+}
+.CyberList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    color: #191a1c;
+    margin: 50px 0;
+}
+.cList_text{
+    width: 70%;
+}
+.cList_text p{
+    font-size: 18px;
+}
+.cList_text li{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.KapitalContainer .ts_NodeProductTable,
+.BetrKrankenContainer .ts_NodeProductTable,
+.BetrAlterContainer .ts_NodeProductTable,
+.FinanzenContainer .ts_NodeProductTable,
+.krankPflegeContainer .ts_NodeProductTable,
+.hausWohContainer .ts_NodeProductTable,
+.ReiseeContainer .ts_NodeProductTable,
+.HaustierContainer .ts_NodeProductTable,
+.kfzContainer .ts_NodeProductTable,
+.cyberContainer .ts_NodeProductTable{
+    width: 75%;
+    justify-content: flex-start;
+}
+.BetrAlterContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.BetrAlterContainer .videoSect{
+    background-image: url("../images/BetrAlter.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.BetrAlterContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg5.jpg");
+}
+.BetrAlterContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg6.jpg");
+}
+.BetrAlterContainer .benefitCard{
+    width: 335px;
+    text-align: center;
+}
+.BetrKrankenContainer .videoSect{
+    background-image: url("../images/Betriebliche_Krankenversicherung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.BetrKrankenContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg7.jpg");
+}
+.BetrKrankenContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg8.jpg");
+}
+.BetrKrankenContainer .benefitCard{
+    text-align: center;
+}
+.KapitalContainer .videoSect{
+    background-image: url("../images/Kapitalanlage.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.KapitalContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg9.jpg");
+}
+.KapitalContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg10.jpg");
+}
+.UnterContainer .videoSect{
+    background-image: url("../images/Unternehmensschutz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.UnterContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg11.jpg");
+}
+.UnterContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg12.jpg");
+}
+.VorsorgeContainer .ts_NodeProductTable,
+.PrivatschutzContainer .ts_NodeProductTable,
+.OldtimerContainer .ts_NodeProductTable,
+.UnterContainer .ts_NodeProductTable{
+    width: 90%;
+}
+.VorsorgeContainer .videoSect{
+    background-image: url("../images/Vorsorge.jpg");
+    background-position: bottom;
+    background-size: cover;
+}
+.VorsorgeContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg13.jpg");
+}
+.VorsorgeContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg14.jpg");
+}
+.FinanzenContainer .videoSect{
+    background-image: url("../images/Finanzen.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.FinanzenContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg15.jpg");
+}
+.FinanzenContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg16.jpg");
+}
+.FinanzenContainer .bCardText{
+    text-align: center;
+}
+.FinanzenContainer .Ins_benefits .bCardText h3{
+    font-size: 24px;
+    color: #191a1c;
+}
+.FinanzenContainer .Ins_benefits .bCardText p{
+    font-size: 18px;
+    color: #535557;
+}
+.krankPflegeContainer .videoSect{
+    background-image: url("../images/Krankheit&Pflege.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.krankPflegeContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg17.jpg");
+}
+.krankPflegeContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg18.jpg");
+}
+.hausWohContainer .videoSect{
+    background-image: url("../images/Haus&Wohnen.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.hausWohContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg19.jpg");
+}
+.hausWohContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg20.jpg");
+}
+.hausWohContainer .ins_Options li{
+    margin-bottom: 10px;
+}
+.ReiseeContainer .videoSect{
+    background-image: url("../images/Reise&Freizeitversicherung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.ReiseeContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg21.jpg");
+}
+.ReiseeContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg22.jpg");
+}
+.HaustierContainer .videoSect{
+    background-image: url("../images/Haustier\ Versicherung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.HaustierContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg23.jpg");
+}
+.HaustierContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg24.jpg");
+}
+.PrivatschutzContainer .videoSect{
+    background-image: url("../images/Privatschutz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.PrivatschutzContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg25.jpg");
+}
+.PrivatschutzContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg26.jpg");
+}
+.OldtimerContainer .videoSect{
+    background-image: url("../images/OldtimerVersicherung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.OldtimerContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg27.jpg");
+}
+.OldtimerContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg28.jpg");
+}
+.kfzContainer .videoSect{
+    background-image: url("../images/KFZVersicherung.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.kfzContainer .ffpItem_Image{
+    background-image: url("../images/ffpImg29.jpg");
+}
+.kfzContainer .ffParItem:nth-child(2) .ffpItem_Image{
+    background-image: url("../images/ffpImg30.jpg");
+}
+.dasUnterContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dasUnterContainer .brwIstMehr{
+    width: 50%;
+    text-align: center;
+}
+.brwIstMehr h1{
+    color: #191a1c;
+}
+.brwIstMehr p{
+    font-size: 18px;
+    color: #191a1c;
+}
+.brw_ZDF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.brwTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.brwTable table{
+    border-collapse: collapse;
+    margin: 50px 0;
+}
+.brwTable table td{
+    width: 300px;
+    height: 180px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+.brwTable table td span{
+    font-size: 32px;
+    color: #191a1c;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+}
+.brwTable table td p{
+    font-size: 16px;
+    color: #191a1c;
+    margin: 0;
+    padding:0 ;
+}
+.brwTable table tr:first-child td {
+    border-top: none;
+}
+
+.brwTable table tr:last-child td {
+    border-bottom: none;
+}
+
+.brwTable table tr td:first-child {
+    border-left: none;
+}
+
+.brwTable table tr td:last-child {
+    border-right: none;
+}
+.partners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.partnerCards{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.partnerCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 130px;
+    box-shadow: 3px 3px 20px 3px rgba(90, 90, 90, 0.2);
+    margin: 10px 30px;
+}
+.partnerCard img{
+    max-height: 130px;
+}
+.partnerCard:first-child{
+    margin-left: 10px;
+}
+.dasUnterContainer .contactUs{
+    width: 100%;
+    height: 840px;
+    background-image: url(../images/kongres.jpg);
+    background-size: cover;
+    background-position: 80% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dasUnterContainer .contactForm{
+    height: 600px;
+}
+.dasUnterContainer .contactFormCntnr h2{
+    font-size: 36px;
+    color: #191a1c;
+}
+.dasUnterContainer .contactFormCntnr p{
+    font-size: 18px;
+    color: #191a1c;
+}
+.uTeamContainer .videoSect{
+    background-image: url(../images/brwTeam.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.uTeam{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+.uTeamCardRow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    margin: 30px 0;
+}
+.uTCard{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 480px;
+    box-shadow: 3px 3px 20px 3px rgba(138, 137, 137, 0.2);
+    border-radius: 5px;
+    margin: 10px 30px;
+}
+.uTCard a{
+    color: #0084BF;
+}
+.utImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10px 30px;
+}
+.utImage img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+.utName{
+    color: #191a1c;
+    font-size: 20px;
+    font-weight: 800;
+}
+.utPos{
+    color: #535557;
+    font-size: 16px;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.utPhone{
+    margin-bottom: 20px;
+}
